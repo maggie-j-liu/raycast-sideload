@@ -7,7 +7,7 @@ const getRepos = async () => {
     "https://api.github.com/search/repositories?q=" + encodeURIComponent("topic:raycast-extension")
   ).then((res) => res.json());
   const repos = (response as GitHubResponse).items.map((repo) => repo.full_name);
-  console.log(repos);
+  return repos;
 };
 
 export default getRepos;

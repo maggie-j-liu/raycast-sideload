@@ -1,6 +1,6 @@
 {
-  "name": "sidecast",
-  "title": "sidecast",
+  "name": "sidecast-sideload",
+  "title": "sidecast-sideload",
   "description": "Makes it easy to sideload raycast extensions.",
   "icon": "command-icon.png",
   "author": "maggie",
@@ -17,6 +17,7 @@
   "dependencies": {
     "@raycast/api": "^1.25.1",
     "node-fetch": "^3.0.0",
+    "sidecast": "github:yodalightsabr/sidecast",
     "unzipper": "^0.10.11"
   },
   "devDependencies": {
