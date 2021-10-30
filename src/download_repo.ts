@@ -4,9 +4,10 @@ import { sideload } from "sidecast";
 const download = async (repo: string) => {
   const toast = await showToast(ToastStyle.Animated, "Downloading the extension...");
   try {
-    await sideload(repo);
+    const destination = await sideload(repo);
     toast.style = ToastStyle.Success;
-    toast.title = "Downloaded successfully!";
+    toast.title = "Downloaded successfully! Load this folder into Raycast:";
+    toast.message = `${destination.replace(":", "/")}`;
   } catch (error: any) {
     console.error(error);
     toast.style = ToastStyle.Failure;
